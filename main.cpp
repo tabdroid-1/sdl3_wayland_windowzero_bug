@@ -9,7 +9,10 @@ SDL_Renderer* renderer = nullptr;
 SDL_AppResult SDL_AppInit(void** appstate, int argc, char** argv)
 {
     // seems to only happen on wayland
+
+#ifndef __APPLE__
     SDL_SetHint(SDL_HINT_VIDEO_DRIVER, "wayland");
+#endif // !__APPLE__
 
     // init
     if (!SDL_Init(SDL_INIT_VIDEO | SDL_INIT_AUDIO)) {
