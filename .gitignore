@@ -1,0 +1,12 @@
+.idea/
+build/
+build*/
+android/app/.cxx
+android/app/build
+.cache/
+Editor/
+.vscode/
+
+
+CMakeLists.txt.user
+*.DS_Store
